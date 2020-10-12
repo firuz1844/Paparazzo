@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name                   = 'Paparazzo'
   s.module_name            = 'Paparazzo'
-  s.version                = '4.0.0'
+  s.version                = '5.0.0'
   s.summary                = "iOS component for picking and editing photos from camera and user's photo library"
   s.homepage               = 'https://github.com/avito-tech/Paparazzo'
   s.license                = 'MIT'
@@ -9,28 +9,28 @@ Pod::Spec.new do |s|
   s.source                 = { :git => 'https://github.com/avito-tech/Paparazzo.git', :tag => "#{s.version}" }
   s.platform               = :ios, '9.0'
   s.ios.deployment_target  = '9.0'
-  s.swift_version          = '4.2'
+  s.swift_version          = '5.0'
   s.requires_arc           = true
 
-  s.frameworks = 'UIKit', 'Photos', 'ImageIO', 'MobileCoreServices', 'GLKit', 'OpenGLES', 'CoreMedia', 'CoreVideo', 'AVFoundation', 'QuartzCore'
+  s.frameworks = 'UIKit', 'Photos', 'ImageIO', 'CoreServices', 'GLKit', 'OpenGLES', 'CoreMedia', 'CoreVideo', 'AVFoundation', 'QuartzCore'
   
   s.dependency 'JNWSpringAnimation'
   
-  s.dependency 'ImageSource/Core', '3.0.0'
-  s.dependency 'ImageSource/PHAsset', '3.0.0'
-  s.dependency 'ImageSource/Local', '3.0.0'
-  s.dependency 'ImageSource/Remote', '3.0.0'
+  s.dependency 'ImageSource/Core', '3.0.2'
+  s.dependency 'ImageSource/PHAsset', '3.0.2'
+  s.dependency 'ImageSource/Local', '3.0.2'
+  s.dependency 'ImageSource/Remote', '3.0.2'
 
   s.default_subspec = 'Core', 'Marshroute', 'AlamofireImage'
 
   s.subspec 'AlamofireImage' do |ai|
     ai.dependency 'Paparazzo/Core'
-    ai.dependency 'ImageSource/AlamofireImage', '3.0.0'
+    ai.dependency 'ImageSource/AlamofireImage', '3.0.2'
   end
 
   s.subspec 'SDWebImage' do |sd|
     sd.dependency 'Paparazzo/Core'
-    sd.dependency 'ImageSource/SDWebImage', '3.0.0'
+    sd.dependency 'ImageSource/SDWebImage', '3.0.2'
   end
   
   s.subspec 'Core' do |cs|
